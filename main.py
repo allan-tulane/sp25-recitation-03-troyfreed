@@ -81,10 +81,11 @@ def _quadratic_multiply(x, y):
     ###
 
 def test_quadratic_multiply(x, y, f):
-    start = time.time()
-    #multiply two numbers x, y using function f
-    
-    return (time.time() - start)*1000
+start = time.time()
+    result = f(x, y)  # Multiply the two numbers using the provided function f
+    elapsed_time = (time.time() - start) * 1000  # Convert seconds to milliseconds
+    print(f"Result: {result}, Time: {elapsed_time:.2f} ms")
+    return elapsed_time
 
     
     
